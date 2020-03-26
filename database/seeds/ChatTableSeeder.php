@@ -14,8 +14,8 @@ class ChatTableSeeder extends Seeder
     {
       for ($i = 0; $i < 10; $i++){
         $newFakeMessage = new Chat();
-        $newFakeMessage->title = $faker->title;
-        $newFakeMessage->sender = $faker->name;
+        $newFakeMessage->title = $faker->realText($maxNbChars = 50, $indexSize = 2);
+        $newFakeMessage->sender = $faker->title . $faker->userName;
         $newFakeMessage->text = $faker->paragraph;
         $newFakeMessage->save();
       }

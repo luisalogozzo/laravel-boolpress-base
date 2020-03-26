@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::resource('chat', 'ChatController');
+Route::resource('users', 'UserController');
+Route::resource('photos', 'PhotoController');
